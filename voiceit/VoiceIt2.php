@@ -582,15 +582,6 @@ class VoiceIt2 {
     return curl_exec($crl);
   }
 
-  public function switchSubAccountType($firstName) {
-    $crl = curl_init();
-    curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/subaccount/'.$firstName.'/switchType'.$this->notificationUrl);
-    curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
-    curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
-    return curl_exec($crl);
-  }
 
   public function regenerateSubAccountAPIToken($subAccountAPIKey) {
     $crl = curl_init();
