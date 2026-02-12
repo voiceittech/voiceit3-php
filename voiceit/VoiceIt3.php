@@ -1,7 +1,7 @@
 <?php
 
 namespace VoiceIt;
-class VoiceIt2 {
+class VoiceIt3 {
 
   const VERSION = '3.7.1';
   public $baseUrl;
@@ -23,7 +23,7 @@ class VoiceIt2 {
   }
 
   public function getVersion() {
-     return VoiceIt2::VERSION;
+     return VoiceIt3::VERSION;
   }
 
   public function addNotificationUrl($url) {
@@ -42,7 +42,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/phrases/'.$contentLanguage.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
     return curl_exec($crl);
@@ -52,7 +52,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/users'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
     return curl_exec($crl);
@@ -62,7 +62,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/users'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     return curl_exec($crl);
@@ -72,7 +72,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/users/'.$userId.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
     return curl_exec($crl);
@@ -82,7 +82,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/users/'.$userId.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'DELETE');
     return curl_exec($crl);
@@ -92,7 +92,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/users/'.$userId.'/groups'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
     return curl_exec($crl);
@@ -102,7 +102,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/'.$userId.'/all'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'DELETE');
     return curl_exec($crl);
@@ -112,7 +112,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/voice/'.$userId.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
     return curl_exec($crl);
@@ -122,7 +122,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/face/'.$userId.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
     return curl_exec($crl);
@@ -132,7 +132,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/video/'.$userId.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
     return curl_exec($crl);
@@ -143,7 +143,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/voice'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -160,7 +160,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/voice/byUrl'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -178,7 +178,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/face'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -193,7 +193,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/face/byUrl'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -209,7 +209,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/video'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -226,7 +226,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/video/byUrl'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -243,7 +243,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/groups'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
     return curl_exec($crl);
@@ -253,7 +253,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/groups/'.$groupId.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
     return curl_exec($crl);
@@ -263,7 +263,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/groups/'.$groupId.'/exists'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
     return curl_exec($crl);
@@ -273,7 +273,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/groups'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -287,7 +287,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/groups/addUser'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'PUT');
     $fields = [
@@ -302,7 +302,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/groups/removeUser'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'PUT');
     $fields = [
@@ -317,7 +317,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/groups/'.$groupId.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'DELETE');
     return curl_exec($crl);
@@ -328,7 +328,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/verification/voice'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -345,7 +345,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/verification/voice/byUrl'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -363,7 +363,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/verification/face'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -378,7 +378,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/verification/face/byUrl'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -394,7 +394,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/verification/video'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -411,7 +411,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/verification/video/byUrl'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -429,7 +429,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/identification/voice'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -446,7 +446,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/identification/voice/byUrl'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -464,7 +464,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/identification/face'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -479,7 +479,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/identification/face/byUrl'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -495,7 +495,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/identification/video'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -512,7 +512,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/identification/video/byUrl'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -530,7 +530,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/users/'.$userId.'/token?timeOut='.strval($secondsToTimeout));
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     return curl_exec($crl);
@@ -540,7 +540,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/users/'.$userId.'/expireTokens');
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     return curl_exec($crl);
@@ -550,7 +550,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/subaccount/unmanaged'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -568,7 +568,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/subaccount/managed'.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
@@ -587,7 +587,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/subaccount/'.$subAccountAPIKey.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     return curl_exec($crl);
@@ -597,7 +597,7 @@ class VoiceIt2 {
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/subaccount/'.$subAccountAPIKey.$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
-    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt2::VERSION));
+    curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'DELETE');
     return curl_exec($crl);

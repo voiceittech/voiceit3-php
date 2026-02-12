@@ -1,6 +1,6 @@
 <img src="./php.png" width="100%" style="width:100%" />
 
-# VoiceIt3-PHP [![travisstatus](https://app.travis-ci.com/voiceittech/VoiceIt3-PHP.svg?branch=master)](https://app.travis-ci.com/github/voiceittech/VoiceIt3-PHP) [![version](https://img.shields.io/packagist/v/voiceit-php/voiceit2)](https://packagist.org/packages/voiceit-php/voiceit2) [![downloads](https://img.shields.io/packagist/dm/voiceit-php/voiceit2)](https://packagist.org/packages/voiceit-php/voiceit2) ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
+# VoiceIt3-PHP [![travisstatus](https://app.travis-ci.com/voiceittech/VoiceIt3-PHP.svg?branch=master)](https://app.travis-ci.com/github/voiceittech/VoiceIt3-PHP) [![version](https://img.shields.io/packagist/v/voiceit-php/voiceit3)](https://packagist.org/packages/voiceit-php/voiceit3) [![downloads](https://img.shields.io/packagist/dm/voiceit-php/voiceit3)](https://packagist.org/packages/voiceit-php/voiceit3) ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 A PHP wrapper for VoiceIt's API 3.0 featuring Voice + Face Verification and Identification.
 

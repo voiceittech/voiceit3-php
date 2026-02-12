@@ -1,5 +1,5 @@
 <?php
-include('../voiceit/VoiceIt2.php');
+include('../voiceit/VoiceIt3.php');
 
 function AssertEqual($arg1, $arg2, $line) {
   if ($arg1 != $arg2) {
@@ -24,7 +24,7 @@ function AssertGreaterThan($arg1, $arg2, $line) {
 
 $viapikey = getenv("VIAPIKEY");
 $viapitoken = getenv("VIAPITOKEN");
-$myVoiceIt = new VoiceIt\VoiceIt2($viapikey, $viapitoken, 'https://api.voiceit.io');
+$myVoiceIt = new VoiceIt\VoiceIt3($viapikey, $viapitoken, 'https://api.voiceit.io');
 
 if (getenv("BOXFUSE_ENV") == "voiceittest") {
   file_put_contents(getenv("HOME")."/platformVersion", $myVoiceIt->getVersion());
