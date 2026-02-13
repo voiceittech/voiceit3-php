@@ -114,7 +114,7 @@ then
       done
 
       json='{"authenticationPassword":"'$EMAILAUTHPASS'", "messages" : "'$formattedmessages'", "packageManaged": "true", "instructions": "composer update</code></div><br /><p class=\"p1\"><span class=\"s1\">inside your project.</span></p><br />"}'
-      curl -X POST -H "Content-Type: application/json" -d $json "https://qpi.voiceit.io/platform/42"
+      curl -X POST -H "Content-Type: application/json" -d $json "https://api.voiceit.io/platform/42"
     fi
     exit 0
 

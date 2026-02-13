@@ -10,7 +10,7 @@ class VoiceIt3 {
   public $apiToken;
   public $platformId = '42';
 
-  function __construct($key, $token, $customUrl = 'https://qpi.voiceit.io') {
+  function __construct($key, $token, $customUrl = 'https://api.voiceit.io') {
      $this->apiKey = $key;
      $this->apiToken = $token;
      $this->baseUrl = $customUrl;
