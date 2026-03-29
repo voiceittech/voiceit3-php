@@ -1,6 +1,5 @@
 <img src="./php.png" width="100%" style="width:100%" />
 
-# VoiceIt3-PHP [![CI](https://github.com/voiceittech/VoiceIt3-PHP/actions/workflows/ci.yml/badge.svg)](https://github.com/voiceittech/VoiceIt3-PHP/actions/workflows/ci.yml) [![version](https://img.shields.io/packagist/v/voiceit-php/voiceit3)](https://packagist.org/packages/voiceit-php/voiceit3) [![downloads](https://img.shields.io/packagist/dm/voiceit-php/voiceit3)](https://packagist.org/packages/voiceit-php/voiceit3) ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 A PHP wrapper for VoiceIt's API 3.0 featuring Voice + Face Verification and Identification.
 
@@ -13,7 +12,7 @@ You can visit our [HTTP API 3.0 Documentation](https://api.voiceit.io/?php#intro
 
 ## Support
 
-Contact us with any questions at support@voiceit.io
+Contact us with any questions at support@voiceit.tech
 
 ## License
 
