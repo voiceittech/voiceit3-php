@@ -1,5 +1,5 @@
 <?php
-include('../voiceit/VoiceIt3.php');
+include('../voiceit/voiceit3.php');
 
 function AssertEqual($arg1, $arg2, $line) {
   if ($arg1 != $arg2) {
