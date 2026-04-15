@@ -110,7 +110,7 @@ class VoiceIt3 {
 
   public function getAllVoiceEnrollments($userId) {
     $crl = curl_init();
-    curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/voice/'.rawrawurlencode($userId).$this->notificationUrl);
+    curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/voice/'.rawurlencode($userId).$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
@@ -120,7 +120,7 @@ class VoiceIt3 {
 
   public function getAllFaceEnrollments($userId) {
     $crl = curl_init();
-    curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/face/'.rawrawurlencode($userId).$this->notificationUrl);
+    curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/face/'.rawurlencode($userId).$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
@@ -130,7 +130,7 @@ class VoiceIt3 {
 
   public function getAllVideoEnrollments($userId) {
     $crl = curl_init();
-    curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/video/'.rawrawurlencode($userId).$this->notificationUrl);
+    curl_setopt($crl, CURLOPT_URL, $this->baseUrl.'/enrollments/video/'.rawurlencode($userId).$this->notificationUrl);
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
