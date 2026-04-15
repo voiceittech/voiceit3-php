@@ -44,8 +44,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function getAllUsers() {
@@ -54,8 +57,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function createUser() {
@@ -64,8 +70,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function checkUserExists($userId) {
@@ -74,8 +83,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function deleteUser($userId) {
@@ -84,8 +96,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'DELETE');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function getGroupsForUser($userId) {
@@ -94,8 +109,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function deleteAllEnrollments($userId) {
@@ -104,8 +122,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'DELETE');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function getAllVoiceEnrollments($userId) {
@@ -114,8 +135,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function getAllFaceEnrollments($userId) {
@@ -124,8 +148,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function getAllVideoEnrollments($userId) {
@@ -134,8 +161,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
 	public function createVoiceEnrollment($userId, $contentLanguage, $phrase, $filePath) {
@@ -145,6 +175,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'userId' => $userId,
@@ -162,6 +193,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'userId' => $userId,
@@ -180,6 +212,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'userId' => $userId,
@@ -195,6 +228,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'userId' => $userId,
@@ -211,6 +245,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'userId' => $userId,
@@ -228,6 +263,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'userId' => $userId,
@@ -245,8 +281,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function getGroup($groupId) {
@@ -255,8 +294,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function groupExists($groupId) {
@@ -265,8 +307,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'GET');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function createGroup($description) {
@@ -275,6 +320,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'description' => $description
@@ -289,13 +335,16 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'PUT');
     $fields = [
       'groupId' => $groupId,
       'userId' => $userId
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function removeUserFromGroup($groupId, $userId) {
@@ -304,13 +353,16 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'DELETE');
     $fields = [
       'groupId' => $groupId,
       'userId' => $userId
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function deleteGroup($groupId) {
@@ -319,8 +371,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'DELETE');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function voiceVerification($userId, $contentLanguage, $phrase, $filePath) {
@@ -330,6 +385,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'userId' => $userId,
@@ -338,7 +394,9 @@ class VoiceIt3 {
       'recording' => curl_file_create($filePath)
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function voiceVerificationByUrl($userId, $contentLanguage, $phrase, $fileUrl) {
@@ -347,6 +405,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'userId' => $userId,
@@ -355,7 +414,9 @@ class VoiceIt3 {
       'fileUrl' => $fileUrl
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function faceVerification($userId, $filePath) {
@@ -365,13 +426,16 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'userId' => $userId,
       'video' => curl_file_create($filePath)
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function faceVerificationByUrl($userId, $fileUrl) {
@@ -380,13 +444,16 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'userId' => $userId,
       'fileUrl' => $fileUrl
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function videoVerification($userId, $contentLanguage, $phrase, $filePath) {
@@ -396,6 +463,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'userId' => $userId,
@@ -404,7 +472,9 @@ class VoiceIt3 {
       'video' => curl_file_create($filePath)
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function videoVerificationByUrl($userId, $contentLanguage, $phrase, $fileUrl) {
@@ -413,6 +483,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'userId' => $userId,
@@ -421,7 +492,9 @@ class VoiceIt3 {
       'fileUrl' => $fileUrl
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function voiceIdentification($groupId, $contentLanguage, $phrase, $filePath) {
@@ -431,6 +504,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'groupId' => $groupId,
@@ -439,7 +513,9 @@ class VoiceIt3 {
       'recording' => curl_file_create($filePath)
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function voiceIdentificationByUrl($groupId, $contentLanguage, $phrase, $fileUrl) {
@@ -448,6 +524,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'groupId' => $groupId,
@@ -456,7 +533,9 @@ class VoiceIt3 {
       'fileUrl' => $fileUrl
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function faceIdentification($groupId, $filePath) {
@@ -466,13 +545,16 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'groupId' => $groupId,
       'video' => curl_file_create($filePath)
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function faceIdentificationByUrl($groupId, $fileUrl) {
@@ -481,13 +563,16 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'groupId' => $groupId,
       'fileUrl' => $fileUrl
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function videoIdentification($groupId, $contentLanguage, $phrase, $filePath) {
@@ -497,6 +582,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'groupId' => $groupId,
@@ -505,7 +591,9 @@ class VoiceIt3 {
       'video' => curl_file_create($filePath)
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function videoIdentificationByUrl($groupId, $contentLanguage, $phrase, $fileUrl) {
@@ -514,6 +602,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
       'groupId' => $groupId,
@@ -522,7 +611,9 @@ class VoiceIt3 {
       'fileUrl' => $fileUrl
     ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
 
@@ -532,8 +623,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function expireUserTokens($userId) {
@@ -542,8 +636,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function createUnmanagedSubAccount($firstName, $lastName, $email, $password, $contentLanguage) {
@@ -552,6 +649,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
           'firstName' => $firstName,
@@ -561,7 +659,9 @@ class VoiceIt3 {
           'contentLanguage' => $contentLanguage
         ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function createManagedSubAccount($firstName, $lastName, $email, $password, $contentLanguage) {
@@ -570,6 +670,7 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
     $fields = [
           'firstName' => $firstName,
@@ -579,7 +680,9 @@ class VoiceIt3 {
           'contentLanguage' => $contentLanguage
         ];
     curl_setopt($crl, CURLOPT_POSTFIELDS, $fields);
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
 
@@ -589,8 +692,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'POST');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
   public function deleteSubAccount($subAccountAPIKey) {
@@ -599,8 +705,11 @@ class VoiceIt3 {
     curl_setopt($crl, CURLOPT_USERPWD, "$this->apiKey:$this->apiToken");
     curl_setopt($crl, CURLOPT_HTTPHEADER, array('platformId: '.$this->platformId, 'platformVersion: '.VoiceIt3::VERSION));
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($crl, CURLOPT_TIMEOUT, 30);
     curl_setopt($crl, CURLOPT_CUSTOMREQUEST, 'DELETE');
-    return curl_exec($crl);
+    $result = curl_exec($crl);
+    curl_close($crl);
+    return $result;
   }
 
 }
