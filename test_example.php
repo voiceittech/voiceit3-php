@@ -1,6 +1,6 @@
 <?php
 include 'voiceit/voiceit3.php';
-$vi = new VoiceIt\VoiceIt3(getenv('VOICEIT_API_KEY'), getenv('VOICEIT_API_TOKEN'));
+$vi = new VoiceIt\voiceit3(getenv('VOICEIT_API_KEY'), getenv('VOICEIT_API_TOKEN'));
 $phrase = "Never forget tomorrow is a new day";
 $td = "test-data";
 $errors = 0;
